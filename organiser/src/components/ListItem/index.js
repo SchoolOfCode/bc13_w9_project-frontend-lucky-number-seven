@@ -1,8 +1,7 @@
-function ListItem({ text, handleDelete }) {
+function ListItem() {
   return (
     <div>
       <li>
-        {text} {<button onClick={handleDelete}>delete</button>}
       </li>
     </div>
   );

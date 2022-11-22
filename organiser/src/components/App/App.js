@@ -2,6 +2,7 @@ import { useState } from "react";
 import "./App.css";
 import List from "../List";
 import Input from "../Input";
+import TechDisplay from '../TechDisplay/TechDisplay'
 //import ListItem from "../ListItem";
 
 function App() {
@@ -19,6 +20,9 @@ function App() {
         <h1>Today, you aim at achieving the following: </h1>
         <Input onData={addTodo} />
         <List toDos={toDos} handleDelete={handleDelete} />
+      </div>
+      <div className='TechDisplay'>
+        <TechDisplay/>
       </div>
     </div>
   );
