@@ -1,9 +1,17 @@
 import ListItem from "../ListItem";
 
-function List() {
+function List({ toDos, handleDelete }) {
   return (
     <ol>
-      <ListItem key={1} />
+      {toDos.map((todo, i) => (
+        <ListItem
+          key={i}
+          text={todo}
+          handleDelete={() => {
+            handleDelete(i);
+          }}
+        />
+      ))}
     </ol>
   );
 }
