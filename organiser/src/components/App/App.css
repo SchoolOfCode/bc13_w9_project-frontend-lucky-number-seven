@@ -4,43 +4,44 @@
   margin: 0 0;
   padding: 0 0;
 }
-
+/* .App {
+  display: flex;
+  flex-flow: row wrap;
+  
+} */
 .toDoContainer{
   display: flex;
   flex-flow: column wrap;
   margin: 10% 70% 0% 5%;
-  width: 534px;
+  width: 40%;
   height: 750px;
-  padding: 25px;
+  padding: 2%;
   border: 1px solid red;
 }
 
 .toDoContainer > h1{
   font-size: 1.0rem;
   margin: 1%;
-  padding: 25px;
+  padding: 2%;
   border: 1px solid green;
-  width: 452px;
+  width: 90%;
   height: 86px;
 }
 
- List {
-background-color: blue;
 
-}
 
 .inputButton {
   padding: 25px;
 } 
 
 .inputButton  input {
-  width: 330px;
+  width: 60%;
   height: 35px;
- margin-right: 30px;
- margin-left: -20px;
+ margin-right: 16%;
+ margin-left: -3%;
 }
 
 .inputButton  button {
-  width: 91px;
+  width: 25%;
   height: 35px;
 }

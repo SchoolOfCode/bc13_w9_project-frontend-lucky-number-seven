@@ -6,11 +6,11 @@
 
 li {
 padding-bottom: 25px;
-flex: 60% 1 1;
+flex: 62% 0 1;
 }
 
 .deleteButton {
-    width: 98px;
+    width: 10%;
     height: 28px;
     background-color: aquamarine;
     flex: 10% 0 auto;
