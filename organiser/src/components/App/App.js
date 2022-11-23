@@ -18,8 +18,10 @@ function App() {
     <div className="App">
       <div className="toDoContainer">
         <h1>Today, you aim at achieving the following: </h1>
+        <div className="inputButton">
         <Input onData={addTodo} />
         <List toDos={toDos} handleDelete={handleDelete} />
+        </div>
       </div>
       <div className='TechDisplay'>
         <TechDisplay/>

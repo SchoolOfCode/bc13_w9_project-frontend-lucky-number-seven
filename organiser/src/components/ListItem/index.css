@@ -1,0 +1,17 @@
+.listAndDeleteButton {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 10%
+}
+
+li {
+padding-bottom: 25px;
+flex: 60% 1 1;
+}
+
+.deleteButton {
+    width: 98px;
+    height: 28px;
+    background-color: aquamarine;
+    flex: 10% 0 auto;
+}

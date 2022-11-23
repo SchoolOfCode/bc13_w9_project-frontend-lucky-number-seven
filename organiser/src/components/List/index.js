@@ -1,3 +1,4 @@
+import "./index.css"
 import ListItem from "../ListItem";
 
 function List({ toDos, handleDelete }) {
