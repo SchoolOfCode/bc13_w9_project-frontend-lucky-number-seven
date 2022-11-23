@@ -1,49 +1,44 @@
 //Plan
 // test the api in postman DONE
 //Import components, react stuff
-// useEffect to fetch 
-// create state 
+// useEffect to fetch
+// create state
 //
-import "./TechDisplay.css"
-import Input from './Input/Input';
-import List from './List/List'
-import {useState, useEffect} from 'react'
+import "./TechDisplay.css";
+import Input from "./Input/Input";
+import List from "./List/List";
+import { useState, useEffect } from "react";
+// import { getUsers } from "../../../../../../Backend/bc13_w9_project-backend-lucky-number-seven/backend/models/sqlModels";
 const url = "http://localhost:3000";
 
+export default function TechDisplay() {
+  const [user, setUser] = useState([]);
+  // useEffect(() => {
+  async function getUsers() {
+    const response = await fetch(`${url}/api/sqlRoutes`);
+    const data = await response.json();
 
+    // console.log(data);
+    setUser(data.payload);
+  }
+  // getUsers()
+  //   }, []);
+  console.log(user);
 
+  return (
+    <div className="techDisplay">
+      <Input />
+      <List />
+      <button onClick={getUsers}>I am BUTTON</button>
 
-export default function TechDisplay () {
-   const [user, setUser] = useState({})
-    useEffect(() => {
-        async function getUsers() {
-          const response = await fetch(`${url}/api/sqlRoutes`);
-          const data = await response.json();
-          const user = {
-                firstName: data.user_firstname,
-                secondName: data.user_surname,
-          };
-        console.log(data);
-        setUser(user)
-    }
-    getUsers()
-      }, []);
-
-    return (
-        <div className="techDisplay">
-            <Input/>
-            <List/>
-            <p>{user.firstName}</p>
-            <p>{user.secondName}</p>
-
-        </div>
-      );
+      {user.map((user) => {
+        return <p> {user.user_firstname}</p>;
+      })}
+    </div>
+  );
 }
- 
-
 
 ///pokemons
-
 
 // function PokemonViewer({ id }) {
 //   const [pokemon, setPokemon] = useState({});
