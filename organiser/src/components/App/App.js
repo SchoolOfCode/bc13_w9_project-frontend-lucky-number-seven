@@ -14,6 +14,10 @@ function App() {
   function handleDelete(i) {
     setTodos([...toDos.slice(0, i), ...toDos.slice(i + 1)]);
   }
+
+
+
+
   return (
     <div className="App">
       <div className="toDoContainer">
