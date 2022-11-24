@@ -14,8 +14,9 @@ const url = "http://localhost:3000";
 export default function TechDisplay() {
   const [user, setUser] = useState([]);
   const [week, setWeek] = useState([]);
-  const [topic, setTopic] = useState([]);
-  const [input, setInput] = useState([]);
+  const [topic, setTopic] = useState("");
+  const [topicList, setTopicList] = useState([]);
+  const [selectTopic, setSelectTopic] = useState([]);
   // useEffect(() => {
   async function getUsers() {
     const response = await fetch(`${url}/api/userRoutes`);
@@ -31,21 +32,25 @@ export default function TechDisplay() {
   }
   console.log(week);
 
-  async function getByTopic() {
+  async function getTopics() {
     const response = await fetch(`${url}/api/linkRoutes`);
     const data = await response.json();
-    setTopic(data.payload);
-    const topic = data.payload.topic;
-    return topic;
+    setSelectTopic(data.payload.topic);
   }
-  console.log(topic);
+  console.log(week);
+
+  async function handleChange(event) {
+    setTopic(event.target.value);
+  }
+  console.log("this is me", topic);
 
   async function handleSubmit(event) {
+    event.preventDefault();
     const response = await fetch(`${url}/api/linkRoutes?topic=${topic}`);
     const data = await response.json();
-    const inputTopic = data.payload.topic;
-    console.log(inputTopic);
+    setTopicList(data.payload);
   }
+  console.log(topicList);
   return (
     <div className="techDisplay">
       <div className="listAndInputs">
@@ -53,15 +58,22 @@ export default function TechDisplay() {
         <List className="listComponent" />
       </div>
       <form onSubmit={handleSubmit}>
-        <input
-          onChange={(event) => {
-            setInput(event.target.value);
-          }}
-          type="text"
-          value={input}
-        ></input>
-        <button onClick={getByTopic}>Topic</button>
+        <select>
+          {topicList?.map((topic) => {
+            return <option>{` ${topic.topic}`}</option>;
+          })}
+        </select>
+        <input onChange={handleChange} type="text" value={topic}></input>
+        <input type="submit" value="topic" />
       </form>
+      {/* <form onSubmit={handleSubmit}>
+        <select>
+          {selectTopic?.map((selectTopic) => {
+            return <option>{` ${selectTopic.topic}`}</option>;
+          })}
+        </select>
+        <input type="submit" value="topic" />
+      </form> */}
       <button onClick={getUsers}>I am BUTTON</button>
       <button onClick={getByWeek}>WEEK</button>
 
@@ -73,7 +85,7 @@ export default function TechDisplay() {
           <p> {`${week.week}${"      "} ${week.topic}${" "}${week.links}`}</p>
         );
       })}
-      {topic.map((topic) => {
+      {topicList?.map((topic) => {
         return <p>{`${topic.week} ${topic.topic} ${topic.links}`}</p>;
       })}
     </div>
