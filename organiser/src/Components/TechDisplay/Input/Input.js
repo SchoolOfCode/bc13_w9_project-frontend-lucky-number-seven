@@ -17,7 +17,9 @@ export default function Input() {
       </div>
       <div className="buttonClass">
         <button className="createUser">Create User</button>
-        <button className="createUser"> Show users</button>
+        <button className="createUser">Show users</button>
+        <button className="createUser">getByWeek</button>
+        <button className="createUser">getByTopic</button>
       </div>
     </form>
   );
