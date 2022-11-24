@@ -28,22 +28,22 @@ export default function TechDisplay() {
   const [selectTopic, setSelectTopic] = useState([]);
   // useEffect(() => {
 
-  async function getNewUser(e) {
-    e.preventDefault();
-    console.log(userFirstName, userSecondName);
-    const newUser = {
-      user_firstname: userFirstName,
-      user_surname: userSecondName,
-    };
-    const response = await fetch(`${url}/api/userRoutes`, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(newUser),
-    });
-    const data = await response.json();
+  // async function getNewUser(e) {
+  //   e.preventDefault();
+  //   console.log(userFirstName, userSecondName);
+  //   const newUser = {
+  //     user_firstname: userFirstName,
+  //     user_surname: userSecondName,
+  //   };
+  //   const response = await fetch(`${url}/api/userRoutes`, {
+  //     method: "POST",
+  //     headers: { "Content-Type": "application/json" },
+  //     body: JSON.stringify(newUser),
+  //   });
+  //   const data = await response.json();
 
-    alert("I am new guy", data.payload);
-  }
+  //   alert("I am new guy", data.payload);
+  // }
 
   async function getNewLink(e) {
     e.preventDefault();
