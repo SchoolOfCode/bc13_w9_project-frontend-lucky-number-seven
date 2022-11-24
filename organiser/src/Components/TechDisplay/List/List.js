@@ -1,9 +1,9 @@
 import ListItem from "../ListItem/ListItem";
 
-export default function List() {
+export default function List({ topicList }) {
   return (
     <ul>
-      <ListItem />
+      <ListItem topicList={topicList} />
     </ul>
   );
 }

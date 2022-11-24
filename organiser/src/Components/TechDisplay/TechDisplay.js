@@ -7,7 +7,7 @@
 import "./TechDisplay.css";
 import Input from "./Input/Input";
 import List from "./List/List";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 // import { getUsers } from "../../../../../../Backend/bc13_w9_project-backend-lucky-number-seven/backend/models/sqlModels";
 const url = "http://localhost:3000";
 
@@ -66,8 +66,13 @@ export default function TechDisplay() {
   return (
     <div className="techDisplay">
       <div className="listAndInputs">
-        <Input className="inputComponent" />
-        <List className="listComponent" />
+        <Input
+          topic={topic}
+          handleSubmit={handleSubmit}
+          handleChange={handleChange}
+          className="inputComponent"
+        />
+        <List topicList={topicList} className="listComponent" />
       </div>
       <form onSubmit={handleSubmit}>
         <input onChange={handleChange} type="text" value={topic}></input>
@@ -94,4 +99,3 @@ export default function TechDisplay() {
     </div>
   );
 }
-<Input />;
