@@ -3,12 +3,17 @@ import "./ListItem.css";
 export default function ListItem({ topicList, weekList }) {
   return (
     <div className="listItemsSecondSection">
-      {topicList?.map((topic) => {
-        return <li>{`${topic.week} ${topic.topic} ${topic.links}`}</li>;
+      {topicList?.map((topic, i) => {
+        return <li key={i}>{`${topic.week} ${topic.topic} ${topic.links}`}</li>;
       })}
-      {weekList?.map((week) => {
+      {weekList?.map((week, i) => {
         return (
-          <p> {`${week.week}${"      "} ${week.topic}${" "}${week.links}`}</p>
+          <li key={i}>
+            {" "}
+            <span>{week.week}</span>
+            <span>{week.topic}</span>
+            <span>{week.links}</span>
+          </li>
         );
       })}
     </div>
