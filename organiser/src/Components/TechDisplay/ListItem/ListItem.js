@@ -1,6 +1,6 @@
 import "./ListItem.css";
 
-export default function ListItem({ topicList, weekList, get }) {
+export default function ListItem({ topicList, weekList }) {
   return (
     <div className="listItemsSecondSection">
       {topicList?.map((topic) => {

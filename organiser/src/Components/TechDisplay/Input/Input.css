@@ -1,37 +1,37 @@
-.seriesOfInputs input{
-    display: inline flex;
-    border: 1px solid #ec705d;
-    border-radius: 20px;
-    background-color: #f6fafb;
-    width: 100px;
-    padding: 10px;
-    margin: 5px;
+.seriesOfInputs input {
+  display: inline flex;
+  border: 1px solid #ec705d;
+  border-radius: 20px;
+  background-color: #f6fafb;
+  width: 100px;
+  padding: 10px;
+  margin: 5px;
 }
 .seriesOfInputs {
-    background-image: url('https://user-images.githubusercontent.com/15075759/28719144-86dc0f70-73b1-11e7-911d-60d70fcded21.png'); 
-    background-color: #f6fafb;
+  background-image: url("https://user-images.githubusercontent.com/15075759/28719144-86dc0f70-73b1-11e7-911d-60d70fcded21.png");
+  background-color: #f6fafb;
 }
-.week{
-    width: 60px !important;
+.week {
+  width: 60px !important;
 }
 
-.buttonClass button{
-    background-image: url('https://user-images.githubusercontent.com/15075759/28719144-86dc0f70-73b1-11e7-911d-60d70fcded21.png'); 
-background-color: #f6fafb;
-padding: 10px;
-margin: 5px;
-border-radius: 20px;
+.buttonClass button {
+  background-image: url("https://user-images.githubusercontent.com/15075759/28719144-86dc0f70-73b1-11e7-911d-60d70fcded21.png");
+  background-color: #f6fafb;
+  padding: 10px;
+  margin: 5px;
+  border-radius: 20px;
 }
 .buttonClass button:hover {
-    background: #ec705d;
-    background-image: -webkit-linear-gradient(top, #ec705d, #63b3fb);
-    background-image: -moz-linear-gradient(top, #ec705d, #63b3fb);
-    background-image: -ms-linear-gradient(top, #ec705d, #63b3fb);
-    background-image: -o-linear-gradient(top, #ec705d, #63b3fb);
-    background-image: linear-gradient(to bottom, #ec705d, #63b3fb);
-    text-decoration: none;
-  }
+  background: #ec705d;
+  background-image: -webkit-linear-gradient(top, #ec705d, #63b3fb);
+  background-image: -moz-linear-gradient(top, #ec705d, #63b3fb);
+  background-image: -ms-linear-gradient(top, #ec705d, #63b3fb);
+  background-image: -o-linear-gradient(top, #ec705d, #63b3fb);
+  background-image: linear-gradient(to bottom, #ec705d, #63b3fb);
+  text-decoration: none;
+}
 .buttonClass {
-    background-image: url('https://user-images.githubusercontent.com/15075759/28719144-86dc0f70-73b1-11e7-911d-60d70fcded21.png'); 
-    background-color: #f6fafb;
+  background-image: url("https://user-images.githubusercontent.com/15075759/28719144-86dc0f70-73b1-11e7-911d-60d70fcded21.png");
+  background-color: #f6fafb;
 }

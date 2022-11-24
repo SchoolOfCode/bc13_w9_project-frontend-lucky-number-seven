@@ -1,5 +1,7 @@
-*, *::before, *::after { 
-  background-image: url('https://as2.ftcdn.net/v2/jpg/02/79/69/27/500_F_279692716_zt40b77svYy4ZB8PFnoI44jwqNkoV1HK.jpg');
+*,
+*::before,
+*::after {
+  /* background-image: url("https://as2.ftcdn.net/v2/jpg/02/79/69/27/500_F_279692716_zt40b77svYy4ZB8PFnoI44jwqNkoV1HK.jpg"); */
   /* background-image: url('https://png.pngtree.com/background/20210710/original/pngtree-colour-graffiti-campus-background-picture-image_991264.jpg'); */
   background-color: #f5ddd5;
   box-sizing: border-box;
@@ -8,15 +10,14 @@
 }
 
 .App {
+  background-image: url("https://as2.ftcdn.net/v2/jpg/02/79/69/27/500_F_279692716_zt40b77svYy4ZB8PFnoI44jwqNkoV1HK.jpg");
   display: flex;
   flex-flow: row wrap;
   padding: 5% 0%;
   justify-content: center;
-
-
 }
-.toDoContainer{
-  background-image: url('https://user-images.githubusercontent.com/15075759/28719144-86dc0f70-73b1-11e7-911d-60d70fcded21.png'); 
+.toDoContainer {
+  /* background-image: url("https://user-images.githubusercontent.com/15075759/28719144-86dc0f70-73b1-11e7-911d-60d70fcded21.png"); */
   /* background-color: #f6fafb; */
   display: flex;
   flex-flow: column wrap;
@@ -25,63 +26,59 @@
   max-width: 45%;
   height: 750px;
   padding: 2%;
-  border: 1px solid #354F52;
-  border-radius: 30px
+  border: 1px solid #354f52;
+  border-radius: 30px;
 }
 
-.toDoContainer > h1{
-  background-image: url('https://user-images.githubusercontent.com/15075759/28719144-86dc0f70-73b1-11e7-911d-60d70fcded21.png'); 
-  font-family: 'Lobster', 'cursive';
+.toDoContainer > h1 {
+  /* background-image: url('https://user-images.githubusercontent.com/15075759/28719144-86dc0f70-73b1-11e7-911d-60d70fcded21.png');  */
+  font-family: "Lobster", "cursive";
   background-color: #f6fafb;
   color: black;
-  font-size: 1.0rem;
+  font-size: 1rem;
   margin: 1%;
   padding: 2%;
   width: 90%;
   height: 86px;
-  border-radius: 25px
+  border-radius: 25px;
 }
-
-
 
 .inputButton {
-  background-image: url('https://user-images.githubusercontent.com/15075759/28719144-86dc0f70-73b1-11e7-911d-60d70fcded21.png'); 
+  /* background-image: url("https://user-images.githubusercontent.com/15075759/28719144-86dc0f70-73b1-11e7-911d-60d70fcded21.png"); */
   background-color: #f6fafb;
   padding: 25px;
-  
-} 
-
-.toDoForm{
-  background-image: url('https://user-images.githubusercontent.com/15075759/28719144-86dc0f70-73b1-11e7-911d-60d70fcded21.png'); 
-  background-color: #f6fafb;
-display: flex;
-
 }
 
-.inputButton  input {
-  background-image: url('https://user-images.githubusercontent.com/15075759/28719144-86dc0f70-73b1-11e7-911d-60d70fcded21.png'); 
+.toDoForm {
+  /* background-image: url("https://user-images.githubusercontent.com/15075759/28719144-86dc0f70-73b1-11e7-911d-60d70fcded21.png"); */
+  background-color: #f6fafb;
+  display: flex;
+}
+
+.inputButton input {
+  /* background-image: url("https://user-images.githubusercontent.com/15075759/28719144-86dc0f70-73b1-11e7-911d-60d70fcded21.png"); */
   background-color: #f6fafb;
   width: 60%;
   height: 35px;
- margin-right: 16%;
- margin-left: -3%;
- border-radius: 25px
+  margin-right: 16%;
+  margin-left: -3%;
+  border-radius: 25px;
 }
 
-.inputButton  button {
-  background-image: url('https://user-images.githubusercontent.com/15075759/28719144-86dc0f70-73b1-11e7-911d-60d70fcded21.png'); 
+.inputButton button {
+  /* background-image: url("https://user-images.githubusercontent.com/15075759/28719144-86dc0f70-73b1-11e7-911d-60d70fcded21.png"); */
   background-color: #f6fafb;
   width: 25%;
   height: 35px;
-  border-radius: 25px
+  border-radius: 25px;
 }
 
-.inputButton button:hover{
-    background: #ec705d;
-    background-image: -webkit-linear-gradient(top, #ec705d, #ec705d);
-    background-image: -moz-linear-gradient(top, #ec705d, #ec705d);
-    background-image: -ms-linear-gradient(top, #ec705d, #ec705d);
-    background-image: -o-linear-gradient(top, #ec705d, #ec705d);
-    background-image: linear-gradient(to bottom, #ec705d, #ec705d);
-    text-decoration: none;
-  }
+.inputButton button:hover {
+  background: #ec705d;
+  background-image: -webkit-linear-gradient(top, #ec705d, #ec705d);
+  background-image: -moz-linear-gradient(top, #ec705d, #ec705d);
+  background-image: -ms-linear-gradient(top, #ec705d, #ec705d);
+  background-image: -o-linear-gradient(top, #ec705d, #ec705d);
+  background-image: linear-gradient(to bottom, #ec705d, #ec705d);
+  text-decoration: none;
+}
