@@ -21,7 +21,7 @@ function App() {
   return (
     <div className="App">
       <div className="toDoContainer">
-        <h1>Today, you aim at achieving the following: </h1>
+        <h1 >Today, you aim at achieving the following: </h1>
         <div className="inputButton">
         <Input onData={addTodo} />
         <List toDos={toDos} handleDelete={handleDelete} />

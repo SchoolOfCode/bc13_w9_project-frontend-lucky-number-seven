@@ -1,7 +1,7 @@
 .seriesOfInputs input{
     display: inline flex;
-    border: 1px solid blue;
-    background-color: aqua;
+    border: 1px solid #ec705d;
+    background-color: #f6fafb;
     width: 100px;
     padding: 10px;
     margin: 5px;
