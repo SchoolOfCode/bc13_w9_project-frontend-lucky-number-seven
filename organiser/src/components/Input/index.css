@@ -1,0 +1,9 @@
+.to-add-button {
+		background: #ec705d;
+		background-image: -webkit-linear-gradient(top, #ec705d, #63b3fb);
+		background-image: -moz-linear-gradient(top, #ec705d, #63b3fb);
+		background-image: -ms-linear-gradient(top, #ec705d, #63b3fb);
+		background-image: -o-linear-gradient(top, #ec705d, #63b3fb);
+		background-image: linear-gradient(to bottom, #ec705d, #63b3fb);
+		text-decoration: none;
+	  }

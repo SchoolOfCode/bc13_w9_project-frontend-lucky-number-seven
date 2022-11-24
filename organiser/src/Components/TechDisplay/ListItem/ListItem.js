@@ -5,7 +5,7 @@ export default function ListItem() {
     <div className="listItemsSecondSection">
       <li>
         first name and surname : <span>I am the week </span>
-        <span>I am the topic</span> <span> I am the link</span>
+        <span >I am the topic</span> <span> I am the link</span>
       </li>
       <li>
         first name and surname : <span>I am the week </span>
