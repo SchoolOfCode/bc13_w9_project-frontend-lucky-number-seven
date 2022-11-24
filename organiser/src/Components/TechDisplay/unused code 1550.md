@@ -49,11 +49,7 @@ export default function TechDisplay() {
     e.preventDefault();
 
     const newLink = {
-      user_firstname: userFirstName,
-      user_surname: userSecondName,
-      week: week,
-      topic: topic,
-      links: link,
+      link: link,
     };
     const response = await fetch(`${url}/api/linkRoutes`, {
       method: "POST",
@@ -152,7 +148,7 @@ export default function TechDisplay() {
           <input onChange={handleChangeLink}></input>
           <input type="submit" value="createUser"></input>
         </form> */}
-        <form onSubmit={(e) => getNewLink(e)}>
+        <form onSubmit={(e) => getNewUser(e)}>
           <label>
             First name
             <input
@@ -171,36 +167,6 @@ export default function TechDisplay() {
               onChange={(e) => setUserSecondName(e.target.value)}
             />
             <input type="submit" value="user" />
-          </label>
-          <label>
-            Week Number
-            <input
-              type="text"
-              name="Week Number"
-              value={week}
-              onChange={(e) => setWeek(e.target.value)}
-            />
-            <input type="submit" value="user" />
-          </label>
-          <label>
-            Topic
-            <input
-              type="text"
-              name="topic"
-              value={topic}
-              onChange={(e) => setTopic(e.target.value)}
-            />
-            <input type="submit" value="user" />
-          </label>
-          <label>
-            Link
-            <input
-              type="text"
-              name="link"
-              value={link}
-              onChange={(e) => setLink(e.target.value)}
-            />
-            <input type="submit" value="newLink" />
           </label>
         </form>
       </div>
