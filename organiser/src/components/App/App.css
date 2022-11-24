@@ -22,6 +22,7 @@
   height: 750px;
   padding: 2%;
   border: 1px solid #354F52;
+  border-radius: 30px
 }
 
 .toDoContainer > h1{
@@ -33,6 +34,7 @@
   border: 1px solid #354F52;
   width: 90%;
   height: 86px;
+  border-radius: 25px
 }
 
 
@@ -40,6 +42,7 @@
 .inputButton {
   background-color: #f6fafb;
   padding: 25px;
+  
 } 
 
 .toDoForm{
@@ -54,10 +57,12 @@ display: flex;
   height: 35px;
  margin-right: 16%;
  margin-left: -3%;
+ border-radius: 25px
 }
 
 .inputButton  button {
   background-color: #f6fafb;
   width: 25%;
   height: 35px;
+  border-radius: 25px
 }
