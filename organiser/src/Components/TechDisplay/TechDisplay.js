@@ -152,16 +152,6 @@ export default function TechDisplay() {
           className="listComponent"
         />
       </div>
-      <div className="Test">
-        {/* <form>
-          <input onChange={handleChangeFirstName}></input>
-          <input onChange={handleChangeSurname}></input>
-          <input onChange={handleChangeWeekNumber}></input>
-          <input onChange={handleChangeTopicName}></input>
-          <input onChange={handleChangeLink}></input>
-          <input type="submit" value="createUser"></input>
-        </form> */}
-      </div>
     </div>
   );
 }

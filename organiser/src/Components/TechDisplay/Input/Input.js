@@ -17,6 +17,10 @@ export default function Input({
   link,
   setLink,
 }) {
+  function refreshPage() {
+    window.location.reload();
+  }
+
   return (
     <div>
       <form className="formClass" onSubmit={handleSubmit}>
@@ -45,7 +49,6 @@ export default function Input({
             value={userSecondName}
             onChange={(e) => setUserSecondName(e.target.value)}
           />
-          <input type="submit" value="user" />
         </label>
         <label>
           Week Number
@@ -55,7 +58,6 @@ export default function Input({
             value={week}
             onChange={(e) => setWeek(e.target.value)}
           />
-          <input type="submit" value="user" />
         </label>
         <label>
           Topic
@@ -65,7 +67,6 @@ export default function Input({
             value={topic}
             onChange={(e) => setTopic(e.target.value)}
           />
-          <input type="submit" value="user" />
         </label>
         <label>
           Link
@@ -78,6 +79,9 @@ export default function Input({
           <input type="submit" value="newLink" />
         </label>
       </form>
+      <button type="submit" onClick={refreshPage}>
+        Refresh Button
+      </button>
     </div>
 
     // <form className="formClass">
