@@ -1,11 +1,24 @@
 import "./Input.css";
 
-export default function Input({ handleChange, handleSubmit, topic }) {
+export default function Input({
+  handleChange,
+  handleSubmit,
+  topic,
+  handleChangeWeek,
+  handleSubmitWeek,
+  week,
+}) {
   return (
-    <form className="formClass" onSubmit={handleSubmit}>
-      <input onChange={handleChange} type="text" value={topic}></input>
-      <input type="submit" value="topic" />
-    </form>
+    <div>
+      <form className="formClass" onSubmit={handleSubmit}>
+        <input onChange={handleChange} type="text" value={topic}></input>
+        <input type="submit" value="topic" />
+      </form>
+      <form className="formClass" onSubmit={handleSubmitWeek}>
+        <input onChange={handleChangeWeek} type="text" value={week}></input>
+        <input type="submit" value="week" />
+      </form>
+    </div>
 
     // <form className="formClass">
     //   <div className="seriesOfInputs">

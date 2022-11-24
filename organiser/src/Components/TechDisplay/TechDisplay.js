@@ -12,15 +12,18 @@ import { useState } from "react";
 const url = "http://localhost:3000";
 
 export default function TechDisplay() {
-  const [user, setUser] = useState([]);
+  const [user, setUser] = useState({
+    user_firstname: "",
+    user_surname: "",
+  });
   const [week, setWeek] = useState([]);
   const [weekList, setWeekList] = useState([]);
   const [topic, setTopic] = useState("");
   const [topicList, setTopicList] = useState([]);
   const [selectTopic, setSelectTopic] = useState([]);
   // useEffect(() => {
-  async function getUsers() {
-    const response = await fetch(`${url}/api/userRoutes`);
+  async function getNewUser(newUser) {
+    const response = await fetch(`${url}/api/userRoutes${newUser}`);
     const data = await response.json();
     setUser(data.payload);
   }
@@ -62,40 +65,74 @@ export default function TechDisplay() {
     const data = await response.json();
     setWeekList(data.payload);
   }
-  console.log(topicList);
+  // async function handleChangeFirstName(event) {
+  //   setWeek(event.target.value);
+  // }
+  // console.log("this is me", topic);
+
+  async function handleSubmitWeek(event) {
+    event.preventDefault();
+    const response = await fetch(`${url}/api/linkRoutes?week=${week}`);
+    const data = await response.json();
+    setWeekList(data.payload);
+  }
+  function handleChangeUser(evt) {
+    const value = evt.target.value;
+    setUser({
+      ...user,
+      [evt.target.name]: value,
+    });
+  }
+  // async function
+  // console.log(topicList);
   return (
     <div className="techDisplay">
       <div className="listAndInputs">
         <Input
+          className="inputComponent"
           topic={topic}
           handleSubmit={handleSubmit}
           handleChange={handleChange}
-          className="inputComponent"
+          week={week}
+          handleSubmitWeek={handleSubmitWeek}
+          handleChangeWeek={handleChangeWeek}
         />
-        <List topicList={topicList} className="listComponent" />
+        <List
+          topicList={topicList}
+          weekList={weekList}
+          className="listComponent"
+        />
       </div>
-      <form onSubmit={handleSubmit}>
-        <input onChange={handleChange} type="text" value={topic}></input>
-        <input type="submit" value="topic" />
-      </form>
-      <form onSubmit={handleSubmitWeek}>
-        <input onChange={handleChangeWeek} type="text" value={week}></input>
-        <input type="submit" value="week" />
-      </form>
-      <button onClick={getUsers}>I am BUTTON</button>
-      {/* <button onClick={getByWeek}>WEEK</button> */}
-
-      {user.map((user) => {
-        return <p> {`${user.user_firstname} ${user.user_surname}`}</p>;
-      })}
-      {weekList?.map((week) => {
-        return (
-          <p> {`${week.week}${"      "} ${week.topic}${" "}${week.links}`}</p>
-        );
-      })}
-      {topicList?.map((topic) => {
-        return <p>{`${topic.week} ${topic.topic} ${topic.links}`}</p>;
-      })}
+      <div className="Test">
+        {/* <form>
+          <input onChange={handleChangeFirstName}></input>
+          <input onChange={handleChangeSurname}></input>
+          <input onChange={handleChangeWeekNumber}></input>
+          <input onChange={handleChangeTopicName}></input>
+          <input onChange={handleChangeLink}></input>
+          <input type="submit" value="createUser"></input>
+        </form> */}
+        <form>
+          <label>
+            First name
+            <input
+              type="text"
+              name="firstName"
+              value={user.user_firstname}
+              onChange={handleChangeUser}
+            />
+          </label>
+          <label>
+            surname
+            <input
+              type="text"
+              name="surname"
+              value={user.user_surname}
+              onChange={handleChangeUser}
+            />
+          </label>
+        </form>
+      </div>
     </div>
   );
 }

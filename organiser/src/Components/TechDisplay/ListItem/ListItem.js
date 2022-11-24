@@ -1,10 +1,15 @@
 import "./ListItem.css";
 
-export default function ListItem({ topicList }) {
+export default function ListItem({ topicList, weekList, get }) {
   return (
     <div className="listItemsSecondSection">
       {topicList?.map((topic) => {
         return <li>{`${topic.week} ${topic.topic} ${topic.links}`}</li>;
+      })}
+      {weekList?.map((week) => {
+        return (
+          <p> {`${week.week}${"      "} ${week.topic}${" "}${week.links}`}</p>
+        );
       })}
     </div>
     /* 
