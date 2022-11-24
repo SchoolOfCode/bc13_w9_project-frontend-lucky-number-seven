@@ -14,6 +14,7 @@ const url = "http://localhost:3000";
 export default function TechDisplay() {
   const [user, setUser] = useState([]);
   const [week, setWeek] = useState([]);
+  const [weekList, setWeekList] = useState([]);
   const [topic, setTopic] = useState("");
   const [topicList, setTopicList] = useState([]);
   const [selectTopic, setSelectTopic] = useState([]);
@@ -25,12 +26,12 @@ export default function TechDisplay() {
   }
   console.log(user);
 
-  async function getByWeek() {
-    const response = await fetch(`${url}/api/linkRoutes`);
-    const data = await response.json();
-    setWeek(data.payload);
-  }
-  console.log(week);
+  // async function getByWeek() {
+  //   const response = await fetch(`${url}/api/linkRoutes`);
+  //   const data = await response.json();
+  //   setWeek(data.payload);
+  // }
+  // console.log(week);
 
   async function getTopics() {
     const response = await fetch(`${url}/api/linkRoutes`);
@@ -50,6 +51,17 @@ export default function TechDisplay() {
     const data = await response.json();
     setTopicList(data.payload);
   }
+  async function handleChangeWeek(event) {
+    setWeek(event.target.value);
+  }
+  console.log("this is me", topic);
+
+  async function handleSubmitWeek(event) {
+    event.preventDefault();
+    const response = await fetch(`${url}/api/linkRoutes?week=${week}`);
+    const data = await response.json();
+    setWeekList(data.payload);
+  }
   console.log(topicList);
   return (
     <div className="techDisplay">
@@ -58,29 +70,20 @@ export default function TechDisplay() {
         <List className="listComponent" />
       </div>
       <form onSubmit={handleSubmit}>
-        <select>
-          {topicList?.map((topic) => {
-            return <option>{` ${topic.topic}`}</option>;
-          })}
-        </select>
         <input onChange={handleChange} type="text" value={topic}></input>
         <input type="submit" value="topic" />
       </form>
-      {/* <form onSubmit={handleSubmit}>
-        <select>
-          {selectTopic?.map((selectTopic) => {
-            return <option>{` ${selectTopic.topic}`}</option>;
-          })}
-        </select>
-        <input type="submit" value="topic" />
-      </form> */}
+      <form onSubmit={handleSubmitWeek}>
+        <input onChange={handleChangeWeek} type="text" value={week}></input>
+        <input type="submit" value="week" />
+      </form>
       <button onClick={getUsers}>I am BUTTON</button>
-      <button onClick={getByWeek}>WEEK</button>
+      {/* <button onClick={getByWeek}>WEEK</button> */}
 
       {user.map((user) => {
         return <p> {`${user.user_firstname} ${user.user_surname}`}</p>;
       })}
-      {week.map((week) => {
+      {weekList?.map((week) => {
         return (
           <p> {`${week.week}${"      "} ${week.topic}${" "}${week.links}`}</p>
         );
