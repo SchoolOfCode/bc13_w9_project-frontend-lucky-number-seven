@@ -8,7 +8,7 @@ function Input({ onData }) {
     setText("");
   }
   return (
-    <form onSubmit={handleSubmit}>
+    <form className="toDoForm" onSubmit={handleSubmit}>
       <input
         onChange={(event) => {
           console.log(event.target.value);

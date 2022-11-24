@@ -1,5 +1,9 @@
 import ListItem from "../ListItem/ListItem";
 
 export default function List() {
-  return <ListItem />;
+  return (
+    <ul>
+      <ListItem />
+    </ul>
+  );
 }

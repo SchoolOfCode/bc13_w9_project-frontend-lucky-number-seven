@@ -15,7 +15,7 @@ export default function TechDisplay() {
   const [user, setUser] = useState([]);
   // useEffect(() => {
   async function getUsers() {
-    const response = await fetch(`${url}/api/sqlRoutes`);
+    const response = await fetch(`${url}/api/userRoutes`);
     const data = await response.json();
 
     // console.log(data);
@@ -27,8 +27,11 @@ export default function TechDisplay() {
 
   return (
     <div className="techDisplay">
-      <Input />
-      <List />
+      <div className="listAndInputs">
+        <Input className="inputComponent" />
+        <List className="listComponent" />
+      </div>
+
       <button onClick={getUsers}>I am BUTTON</button>
 
       {user.map((user) => {
@@ -37,38 +40,3 @@ export default function TechDisplay() {
     </div>
   );
 }
-
-///pokemons
-
-// function PokemonViewer({ id }) {
-//   const [pokemon, setPokemon] = useState({});
-
-//   useEffect(() => {
-//     async function getPokemons(id) {
-//       const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}`);
-//       const data = await response.json();
-//       const pokemon = {
-//         name: data.name,
-//         image: data.sprites.front_default,
-//       };
-//       setPokemon(pokemon);
-//     }
-
-//     if (!id) return;
-
-//     getPokemons(id);
-
-//     // data.name = name
-//     // data.sprite.front_default = image
-//   }, [id]);
-//   // TODO: send http request to `https://pokeapi.co/api/v2/pokemon/${id}` and display the data!
-//   // HINT: you will need useState and useEffect!
-//   return (
-//     <div className="pokemon-viewer">
-//       <p>{pokemon.name}</p>
-//       <img src={pokemon.image} alt="pokemon character"></img>
-//     </div>
-//   );
-// }
-
-// export default PokemonViewer;

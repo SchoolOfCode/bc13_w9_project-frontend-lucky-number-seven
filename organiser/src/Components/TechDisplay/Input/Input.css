@@ -1,0 +1,17 @@
+.seriesOfInputs input{
+    display: inline flex;
+    border: 1px solid blue;
+    background-color: aqua;
+    width: 100px;
+    padding: 10px;
+    margin: 5px;
+}
+.week{
+    width: 60px !important;
+}
+
+.buttonClass button{
+padding: 10px;
+margin: 5px;
+border-radius: 20px;
+}
