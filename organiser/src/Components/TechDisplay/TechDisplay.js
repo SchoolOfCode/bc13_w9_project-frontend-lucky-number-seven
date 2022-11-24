@@ -136,73 +136,21 @@ export default function TechDisplay() {
           week={week}
           handleSubmitWeek={handleSubmitWeek}
           handleChangeWeek={handleChangeWeek}
+          getNewLink={getNewLink}
+          userFirstName={userFirstName}
+          userSecondName={userSecondName}
+          setUserFirstName={setUserFirstName}
+          setUserSecondName={setUserSecondName}
+          setWeek={setWeek}
+          setTopic={setTopic}
+          link={link}
+          setLink={setLink}
         />
         <List
           topicList={topicList}
           weekList={weekList}
           className="listComponent"
         />
-      </div>
-      <div className="Test">
-        {/* <form>
-          <input onChange={handleChangeFirstName}></input>
-          <input onChange={handleChangeSurname}></input>
-          <input onChange={handleChangeWeekNumber}></input>
-          <input onChange={handleChangeTopicName}></input>
-          <input onChange={handleChangeLink}></input>
-          <input type="submit" value="createUser"></input>
-        </form> */}
-        <form onSubmit={(e) => getNewLink(e)}>
-          <label>
-            First name
-            <input
-              type="text"
-              name="firstname"
-              value={userFirstName}
-              onChange={(e) => setUserFirstName(e.target.value)}
-            />
-          </label>
-          <label>
-            Surname
-            <input
-              type="text"
-              name="surname"
-              value={userSecondName}
-              onChange={(e) => setUserSecondName(e.target.value)}
-            />
-            <input type="submit" value="user" />
-          </label>
-          <label>
-            Week Number
-            <input
-              type="text"
-              name="Week Number"
-              value={week}
-              onChange={(e) => setWeek(e.target.value)}
-            />
-            <input type="submit" value="user" />
-          </label>
-          <label>
-            Topic
-            <input
-              type="text"
-              name="topic"
-              value={topic}
-              onChange={(e) => setTopic(e.target.value)}
-            />
-            <input type="submit" value="user" />
-          </label>
-          <label>
-            Link
-            <input
-              type="text"
-              name="link"
-              value={link}
-              onChange={(e) => setLink(e.target.value)}
-            />
-            <input type="submit" value="newLink" />
-          </label>
-        </form>
       </div>
     </div>
   );

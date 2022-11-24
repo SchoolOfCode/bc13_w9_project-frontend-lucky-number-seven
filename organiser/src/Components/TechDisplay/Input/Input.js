@@ -7,7 +7,20 @@ export default function Input({
   handleChangeWeek,
   handleSubmitWeek,
   week,
+  getNewLink,
+  userFirstName,
+  userSecondName,
+  setUserFirstName,
+  setUserSecondName,
+  setWeek,
+  setTopic,
+  link,
+  setLink,
 }) {
+  function refreshPage() {
+    window.location.reload();
+  }
+
   return (
     <div>
       <form className="formClass" onSubmit={handleSubmit}>
@@ -18,6 +31,57 @@ export default function Input({
         <input onChange={handleChangeWeek} type="text" value={week}></input>
         <input type="submit" value="week" />
       </form>
+      <form onSubmit={(e) => getNewLink(e)}>
+        <label>
+          First name
+          <input
+            type="text"
+            name="firstname"
+            value={userFirstName}
+            onChange={(e) => setUserFirstName(e.target.value)}
+          />
+        </label>
+        <label>
+          Surname
+          <input
+            type="text"
+            name="surname"
+            value={userSecondName}
+            onChange={(e) => setUserSecondName(e.target.value)}
+          />
+        </label>
+        <label>
+          Week Number
+          <input
+            type="text"
+            name="Week Number"
+            value={week}
+            onChange={(e) => setWeek(e.target.value)}
+          />
+        </label>
+        <label>
+          Topic
+          <input
+            type="text"
+            name="topic"
+            value={topic}
+            onChange={(e) => setTopic(e.target.value)}
+          />
+        </label>
+        <label>
+          Link
+          <input
+            type="text"
+            name="link"
+            value={link}
+            onChange={(e) => setLink(e.target.value)}
+          />
+          <input type="submit" value="newLink" />
+        </label>
+      </form>
+      <button type="submit" onClick={refreshPage}>
+        Refresh Button
+      </button>
     </div>
 
     // <form className="formClass">

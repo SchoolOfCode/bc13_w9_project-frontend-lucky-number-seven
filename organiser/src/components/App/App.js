@@ -2,7 +2,7 @@ import { useState } from "react";
 import "./App.css";
 import List from "../List";
 import Input from "../Input";
-import TechDisplay from '../TechDisplay/TechDisplay'
+import TechDisplay from "../TechDisplay/TechDisplay";
 //import ListItem from "../ListItem";
 
 function App() {
@@ -15,20 +15,17 @@ function App() {
     setTodos([...toDos.slice(0, i), ...toDos.slice(i + 1)]);
   }
 
-
-
-
   return (
     <div className="App">
       <div className="toDoContainer">
-        <h1 >Today, you aim at achieving the following: </h1>
+        <h1>Today, you aim at achieving the following: </h1>
         <div className="inputButton">
-        <Input onData={addTodo} />
-        <List toDos={toDos} handleDelete={handleDelete} />
+          <Input onData={addTodo} />
+          <List toDos={toDos} handleDelete={handleDelete} />
         </div>
       </div>
-      <div className='TechDisplay'>
-        <TechDisplay/>
+      <div className="TechDisplay">
+        <TechDisplay />
       </div>
     </div>
   );

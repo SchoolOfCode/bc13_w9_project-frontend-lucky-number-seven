@@ -1,39 +1,39 @@
 .listAndDeleteButton {
-    background-image: url('https://user-images.githubusercontent.com/15075759/28719144-86dc0f70-73b1-11e7-911d-60d70fcded21.png'); 
-    background-color: #f6fafb;
-    display: flex;
-    flex-flow: row wrap;
-    gap: 10%
+  /* background-image: url('https://user-images.githubusercontent.com/15075759/28719144-86dc0f70-73b1-11e7-911d-60d70fcded21.png');  */
+  background-color: #f6fafb;
+  display: flex;
+  flex-flow: row wrap;
+  gap: 10%;
 }
 .listAndDeleteButton button:hover {
-    background: #ec705d;
-    background-image: -webkit-linear-gradient(top, #ec705d, #63b3fb);
-    background-image: -moz-linear-gradient(top, #ec705d, #63b3fb);
-    background-image: -ms-linear-gradient(top, #ec705d, #63b3fb);
-    background-image: -o-linear-gradient(top, #ec705d, #63b3fb);
-    background-image: linear-gradient(to bottom, #ec705d, #63b3fb);
-    text-decoration: none;
-  }
+  background: #ec705d;
+  background-image: -webkit-linear-gradient(top, #ec705d, #63b3fb);
+  background-image: -moz-linear-gradient(top, #ec705d, #63b3fb);
+  background-image: -ms-linear-gradient(top, #ec705d, #63b3fb);
+  background-image: -o-linear-gradient(top, #ec705d, #63b3fb);
+  background-image: linear-gradient(to bottom, #ec705d, #63b3fb);
+  text-decoration: none;
+}
 
 li {
-    background-image: url('https://user-images.githubusercontent.com/15075759/28719144-86dc0f70-73b1-11e7-911d-60d70fcded21.png'); 
-    background-color: #f6fafb;
-padding-bottom: 25px;
-width: 60%;
+  /* background-image: url('https://user-images.githubusercontent.com/15075759/28719144-86dc0f70-73b1-11e7-911d-60d70fcded21.png');  */
+  background-color: #f6fafb;
+  padding-bottom: 25px;
+  width: 60%;
 }
 
 .deleteButton {
-    width: 10%;
-    height: 28px;
-    background-color: aquamarine;
-    flex: 10% 0 auto;
+  width: 10%;
+  height: 28px;
+  background-color: aquamarine;
+  flex: 10% 0 auto;
 }
 .deleteButton button:hover {
-    background: #ec705d;
-    background-image: -webkit-linear-gradient(top, #ec705d, #63b3fb);
-    background-image: -moz-linear-gradient(top, #ec705d, #63b3fb);
-    background-image: -ms-linear-gradient(top, #ec705d, #63b3fb);
-    background-image: -o-linear-gradient(top, #ec705d, #63b3fb);
-    background-image: linear-gradient(to bottom, #ec705d, #63b3fb);
-    text-decoration: none;
-  }
+  background: #ec705d;
+  background-image: -webkit-linear-gradient(top, #ec705d, #63b3fb);
+  background-image: -moz-linear-gradient(top, #ec705d, #63b3fb);
+  background-image: -ms-linear-gradient(top, #ec705d, #63b3fb);
+  background-image: -o-linear-gradient(top, #ec705d, #63b3fb);
+  background-image: linear-gradient(to bottom, #ec705d, #63b3fb);
+  text-decoration: none;
+}
