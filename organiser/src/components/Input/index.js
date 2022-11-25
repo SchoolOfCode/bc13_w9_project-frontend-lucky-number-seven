@@ -1,7 +1,15 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 function Input({ onData }) {
-  const [text, setText] = useState("");
+  const [text, setText] = useState([]);
+
+  useEffect(() => {
+    // storing input name
+    localStorage.setItem("text", JSON.stringify(text));
+  }, [text]);
+
+  //
+
   function handleSubmit(event) {
     event.preventDefault();
     onData(text);

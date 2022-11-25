@@ -1,12 +1,12 @@
-import "./index.css"
+import "./index.css";
 
-function ListItem({text, handleDelete}) {
+function ListItem({ text, handleDelete }) {
   return (
     <div className="listAndDeleteButton">
-      <li className="list"> 
-      {text} 
-      </li>
-      <button className="deleteButton" onClick={handleDelete}>x</button>
+      <li className="list">{text}</li>
+      <button className="deleteButton" onClick={handleDelete}>
+        x
+      </button>
     </div>
   );
 }
