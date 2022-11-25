@@ -1,0 +1,32 @@
+.WeatherLocation {
+    display: flex;
+    height: 250px;
+    width: 400px;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items:center;
+    margin: 2% auto 5% auto;
+    box-shadow: 5px 6px 30px 0px rgba(0,0,0,0.75);
+    border-radius: 50px;
+    opacity: 80%;
+    /* background-image: url("https://png.pngtree.com/thumb_back/fw800/back_our/20190625/ourmid/pngtree-blue-sky-and-white-clouds-sunny-weather-image_260469.jpg"); */
+}
+.WeatherLocation:hover {
+    opacity: 100%;
+   transform: scale(110%);
+   box-shadow: 15px 20px 80px 0px rgba(0,0,0,0.75);
+}
+
+.WeatherLocation h4 {
+    padding: 1% 0%;
+    text-align: center;
+    letter-spacing: 0.9px;
+    text-decoration-style: wavy;
+}
+
+.WeatherLocation img {
+    width: 60px;
+    height: auto;
+    background-color: none;
+    background-image: none;
+}
