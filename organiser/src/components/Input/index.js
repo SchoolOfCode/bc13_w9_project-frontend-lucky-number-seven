@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 
 function Input({ onData }) {
   const [text, setText] = useState([]);

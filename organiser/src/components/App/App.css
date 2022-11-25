@@ -1,30 +1,36 @@
 *,
 *::before,
 *::after {
-  /* background-image: url("https://as2.ftcdn.net/v2/jpg/02/79/69/27/500_F_279692716_zt40b77svYy4ZB8PFnoI44jwqNkoV1HK.jpg"); */
-  /* background-image: url('https://png.pngtree.com/background/20210710/original/pngtree-colour-graffiti-campus-background-picture-image_991264.jpg'); */
-  background-color: #f5ddd5;
   box-sizing: border-box;
   margin: 0 0;
   padding: 0 0;
 }
 
 .App {
-  background-image: url("https://as2.ftcdn.net/v2/jpg/02/79/69/27/500_F_279692716_zt40b77svYy4ZB8PFnoI44jwqNkoV1HK.jpg");
   display: flex;
   flex-flow: row wrap;
   padding: 5% 0%;
   justify-content: center;
   height: 100vh;
+  
 }
 
 .LuckYHeading{
   font-family: "Lobster", "cursive";
   text-align: center;
 }
+
+.LuckYHeading:hover{
+  font-family: "Lobster", "cursive";
+  text-align: center;
+  transform: scale(105%);
+  box-shadow: -22px 18px 60px 0px rgba(0,0,0,0.75);
+margin: 0 auto;
+width: 30%;
+border-radius: 50px;
+}
+
 .toDoContainer {
-  /* background-image: url("https://user-images.githubusercontent.com/15075759/28719144-86dc0f70-73b1-11e7-911d-60d70fcded21.png"); */
-  /* background-color: #f6fafb; */
   display: flex;
   flex-flow: column wrap;
   margin: 0% 5% 0% 5%;
@@ -32,12 +38,12 @@
   max-width: 45%;
   height: 750px;
   padding: 2%;
-  border: 1px solid #354f52;
   border-radius: 30px;
+  box-shadow: 5px 6px 30px 0px rgba(0,0,0,0.75);
+  border-radius: 15px;
 }
 
 .toDoContainer > h1 {
-  /* background-image: url('https://user-images.githubusercontent.com/15075759/28719144-86dc0f70-73b1-11e7-911d-60d70fcded21.png');  */
   font-family: "Lobster", "cursive";
   background-color: #f6fafb;
   color: black;
@@ -48,22 +54,21 @@
   width: 90%;
   height: 86px;
   border-radius: 25px;
+  box-shadow: 1px 2px 10px 1px rgb(255, 214, 221);
 }
 
 .inputButton {
-  /* background-image: url("https://user-images.githubusercontent.com/15075759/28719144-86dc0f70-73b1-11e7-911d-60d70fcded21.png"); */
-  background-color: #f6fafb;
+
   padding: 25px;
 }
 
 .toDoForm {
-  /* background-image: url("https://user-images.githubusercontent.com/15075759/28719144-86dc0f70-73b1-11e7-911d-60d70fcded21.png"); */
-  background-color: #f6fafb;
+
   display: flex;
 }
 
 .inputButton input {
-  /* background-image: url("https://user-images.githubusercontent.com/15075759/28719144-86dc0f70-73b1-11e7-911d-60d70fcded21.png"); */
+  box-shadow: 1px 2px 10px 1px rgb(255, 214, 221);
   background-color: #f6fafb;
   width: 60%;
   height: 35px;
@@ -73,7 +78,7 @@
 }
 
 .inputButton button {
-  /* background-image: url("https://user-images.githubusercontent.com/15075759/28719144-86dc0f70-73b1-11e7-911d-60d70fcded21.png"); */
+  box-shadow: 1px 2px 10px 1px rgb(255, 214, 221);
   background-color: #f6fafb;
   width: 25%;
   height: 35px;

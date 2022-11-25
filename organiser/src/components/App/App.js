@@ -3,6 +3,7 @@ import "./App.css";
 import List from "../List";
 import Input from "../Input";
 import TechDisplay from "../TechDisplay/TechDisplay";
+import Location from "../location";
 //import ListItem from "../ListItem";
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
 
   return (
     <div>
+      <Location />
       <h1 className="LuckYHeading">Lucky Number 7 take on an organiser</h1>
       <div className="App">
         <div className="toDoContainer">
