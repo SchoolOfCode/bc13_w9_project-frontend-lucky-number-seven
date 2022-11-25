@@ -17,6 +17,11 @@
   justify-content: center;
   height: 100vh;
 }
+
+.LuckYHeading{
+  font-family: "Lobster", "cursive";
+  text-align: center;
+}
 .toDoContainer {
   /* background-image: url("https://user-images.githubusercontent.com/15075759/28719144-86dc0f70-73b1-11e7-911d-60d70fcded21.png"); */
   /* background-color: #f6fafb; */
@@ -36,7 +41,8 @@
   font-family: "Lobster", "cursive";
   background-color: #f6fafb;
   color: black;
-  font-size: 1rem;
+  font-size: 1.5rem;
+  line-height: 2rem;
   margin: 1%;
   padding: 2%;
   width: 90%;
