@@ -1,8 +1,10 @@
 import { render, screen } from '@testing-library/react';
 import App from './App';
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+
+test("check if the addToList function is called whencle button is clicked", () => {
+  const addToList = jest.fn();
+  render(<App addToList={addToList} />);
+  userEvent.click(screen.getByRole("button"));
+  expect(addToList).toHaveBeenCalled();
 });
