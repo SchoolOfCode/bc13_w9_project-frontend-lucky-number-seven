@@ -26,26 +26,11 @@ export default function TechDisplay() {
   const [topic, setTopic] = useState("");
   const [topicList, setTopicList] = useState([]);
   const [selectTopic, setSelectTopic] = useState([]);
-  // useEffect(() => {
 
-  // async function getNewUser(e) {
-  //   e.preventDefault();
-  //   console.log(userFirstName, userSecondName);
-  //   const newUser = {
-  //     user_firstname: userFirstName,
-  //     user_surname: userSecondName,
-  //   };
-  //   const response = await fetch(`${url}/api/userRoutes`, {
-  //     method: "POST",
-  //     headers: { "Content-Type": "application/json" },
-  //     body: JSON.stringify(newUser),
-  //   });
-  //   const data = await response.json();
-
-  //   alert("I am new guy", data.payload);
-  // }
 
   async function getNewLink(e) {
+    // preventDefault avoids it being rendered before all the needed input are inserted 
+
     e.preventDefault();
 
     const newLink = {
@@ -57,7 +42,10 @@ export default function TechDisplay() {
     };
     const response = await fetch(`${url}/api/linkRoutes`, {
       method: "POST",
+      // headers is a HTTP request specifically used for POST/PUT/PATCH 
+      // headers tells the server that the request body contains a JSON string. 
       headers: { "Content-Type": "application/json" },
+      // newLink is stringified 
       body: JSON.stringify(newLink),
     });
     const data = await response.json();
@@ -65,22 +53,11 @@ export default function TechDisplay() {
     alert("I am new link", data.payload);
   }
 
-  // const response = await fetch(`${url}/api/userRoutes${newUser}`);
-  // const data = await response.json();
-
-  // const newPerson = [...user, newUser.user_firstname, newUser.user_surname];
-  // console.log(data);
-  // console.log(newPerson);
 
   console.log(user);
 
-  // async function getByWeek() {
-  //   const response = await fetch(`${url}/api/linkRoutes`);
-  //   const data = await response.json();
-  //   setWeek(data.payload);
-  // }
-  // console.log(week);
-
+// This function was supposed to return ALL topics
+// However the getTopics function is not being used 
   async function getTopics() {
     const response = await fetch(`${url}/api/linkRoutes`);
     const data = await response.json();
@@ -110,21 +87,9 @@ export default function TechDisplay() {
     const data = await response.json();
     setWeekList(data.payload);
   }
-  // async function handleChangeFirstName(event) {
-  //   setWeek(event.target.value);
-  // }
-  // console.log("this is me", topic);
-
-  // function handleChangeUser(evt) {
-  //   const value = evt.target.value;
-  //   setUser({
-  //     ...userFirstName,
-  //     [evt.target.name]: value,
-  //   });
-  // }
-
-  // async function
-  // console.log(topicList);
+// in the return, the Input component takes in a lot of different props 
+// functions are passed in as yellow 
+// state are passed in as blue - state is a value 
   return (
     <div className="techDisplay">
       <div className="listAndInputs">

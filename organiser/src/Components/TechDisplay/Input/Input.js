@@ -1,5 +1,12 @@
 import "./Input.css";
 
+// input function is being exported so that it can be imported in TechDisplay.js
+// when using export default you can import the function directly without the need to deconstruct 
+// if you export it without default when importing you need to deconstruct it explicityly using -> {}
+
+
+// passing down all the necessary props from TechDisplay.js which in turn is being used in the Input component 
+
 export default function Input({
   handleChange,
   handleSubmit,
@@ -21,6 +28,7 @@ export default function Input({
     window.location.reload();
   }
 
+  
   return (
     <div>
       <div className="formClass">
