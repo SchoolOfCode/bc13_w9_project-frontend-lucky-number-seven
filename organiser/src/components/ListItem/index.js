@@ -1,5 +1,11 @@
 import "./index.css";
 
+
+// text and handleDelete are props that are handed to the function 
+// className is used to identify the element when styling 
+// 
+
+
 function ListItem({ text, handleDelete }) {
   return (
     <div className="listAndDeleteButton">
